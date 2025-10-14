@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sublime Chocolat - Checkout</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d46211",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221810",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .form-radio {
+            border-color: #d46211;
+        }
+
+        .form-radio:checked {
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23ffffff' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
+            background-color: #d46211;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-background-dark dark:text-background-light">
+    <div class="flex flex-col min-h-screen">
+        <header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <h2 class="text-xl font-bold text-gray-900 dark:text-white">Sublime Chocolat</h2>
+                    </div>
+                    <nav class="hidden md:flex items-center gap-8" id="navMenu">
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="/">Inicio</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="/productos/">Productos</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="/nosotros/">Nosotros</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="/contacto/">Contacto</a>
+                    </nav>
+                    <div class="flex items-center gap-3">
+                        <a href="/carrito/"
+                            class="p-2 rounded-full text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.658-.463 1.243-1.117 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.116 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="lg:col-span-1">
+                    <div class="mb-6">
+                        <p class="text-sm text-background-dark/60 dark:text-background-light/60">
+                            <a class="hover:text-primary" href="#">Carrito</a>
+                            <span> / </span>
+                            <span class="font-semibold text-background-dark dark:text-background-light">Pago</span>
+                        </p>
+                    </div>
+                    <div class="space-y-8">
+                        <div>
+                            <h1 class="text-2xl font-bold mb-6">Información de envío</h1>
+                            <div class="grid grid-cols-1 gap-y-6">
+                                <input
+                                    class="w-full bg-transparent border-primary/40 dark:border-primary/50 rounded h-12 px-4 focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-primary/60 placeholder:text-background-dark/40 dark:placeholder:text-background-light/40"
+                                    placeholder="Nombre completo" type="text" />
+                                <input
+                                    class="w-full bg-transparent border-primary/40 dark:border-primary/50 rounded h-12 px-4 focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-primary/60 placeholder:text-background-dark/40 dark:placeholder:text-background-light/40"
+                                    placeholder="Dirección" type="text" />
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <input
+                                        class="w-full bg-transparent border-primary/40 dark:border-primary/50 rounded h-12 px-4 focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-primary/60 placeholder:text-background-dark/40 dark:placeholder:text-background-light/40"
+                                        placeholder="Ciudad" type="text" />
+                                    <input
+                                        class="w-full bg-transparent border-primary/40 dark:border-primary/50 rounded h-12 px-4 focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-primary/60 placeholder:text-background-dark/40 dark:placeholder:text-background-light/40"
+                                        placeholder="Código Postal" type="text" />
+                                </div>
+                                <select
+                                    class="w-full bg-transparent border-primary/40 dark:border-primary/50 rounded h-12 px-4 focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-primary/60 text-background-dark/60 dark:text-background-light/60">
+                                    <option>México</option>
+                                    <option>España</option>
+                                    <option>Argentina</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-bold mb-6">Método de pago</h1>
+                            <div class="space-y-4">
+                                <label
+                                    class="flex items-center p-4 rounded-lg border border-primary/40 dark:border-primary/50 has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/50">
+                                    <input checked=""
+                                        class="form-radio h-5 w-5 focus:ring-offset-0 focus:ring-2 focus:ring-primary/50"
+                                        name="payment-method" type="radio" />
+                                    <span class="ml-4 font-medium">Tarjeta de crédito</span>
+                                </label>
+                                <label
+                                    class="flex items-center p-4 rounded-lg border border-primary/40 dark:border-primary/50 has-[:checked]:border-primary has-[:checked]:ring-2 has-[:checked]:ring-primary/50">
+                                    <input
+                                        class="form-radio h-5 w-5 focus:ring-offset-0 focus:ring-2 focus:ring-primary/50"
+                                        name="payment-method" type="radio" />
+                                    <span class="ml-4 font-medium">PayPal</span>
+                                </label>
+                            </div>
+                            <div class="grid grid-cols-1 gap-y-6 mt-6">
+                                <input
+                                    class="w-full bg-transparent border-primary/40 dark:border-primary/50 rounded h-12 px-4 focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-primary/60 placeholder:text-background-dark/40 dark:placeholder:text-background-light/40"
+                                    placeholder="Número de tarjeta" type="text" />
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <input
+                                        class="w-full bg-transparent border-primary/40 dark:border-primary/50 rounded h-12 px-4 focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-primary/60 placeholder:text-background-dark/40 dark:placeholder:text-background-light/40"
+                                        placeholder="Fecha de expiración (MM/AA)" type="text" />
+                                    <input
+                                        class="w-full bg-transparent border-primary/40 dark:border-primary/50 rounded h-12 px-4 focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-primary/60 placeholder:text-background-dark/40 dark:placeholder:text-background-light/40"
+                                        placeholder="CVC" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-1 bg-primary/5 dark:bg-primary/10 rounded-xl p-8">
+                    <h2 class="text-2xl font-bold mb-6">Resumen del pedido</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-lg bg-cover bg-center"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB6Qtr-mE8s74GlsVyww-1CletWEvj5iwoEHgptJmGh6avlc-0tQBPRw-K1rwPmNNhqaKN0AqAH9uTwO1uW5fXUN1zMYqskmieVFh7BATB8F6TMuz01Gx9l2PU3Odxvw5Ye-R3n0fxTZrAgRBU_tzq78Pw7TTAzaeHuB_YmLm07zMjSXHUe-jg8qlGppjdUIKDYHAfUG_iF4SS1EGAbAREl_ciXIxQFWRodb3XSreMDznUJYjnuVwdJFsGn_NLLwVOnU5Xnff_c');">
+                            </div>
+                            <div class="flex-grow">
+                                <p class="font-semibold">Caja de bombones</p>
+                                <p class="text-sm text-background-dark/60 dark:text-background-light/60">Cantidad: 1</p>
+                            </div>
+                            <p class="font-semibold">$150.00</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-20 h-20 rounded-lg bg-cover bg-center"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDacl2rbMvRYRScxKYJqUHjDiXi7jefBEHTPiNQOYaNkGH5_4db8l0zBbo1K4uHpDNweZVqmRjafylr4p1_Jq_oUZE4KWfT7bw_3m4vgpj7_wtpLhZg_gd05UF8i4oIzlmqjvtvumjLTHFSY7mdGN2ZiZRXUiHvcU0Mlnxhcz0-sizdRy-sBQUT36EARLSEitP2QDpvBxPEDGiG17rniYEHjZDCBJUAaw96KmEJxJLUQc3QuTe6oQhLJr6sNCzloH2FihqB9RlQ');">
+                            </div>
+                            <div class="flex-grow">
+                                <p class="font-semibold">Tableta de chocolate</p>
+                                <p class="text-sm text-background-dark/60 dark:text-background-light/60">Cantidad: 2</p>
+                            </div>
+                            <p class="font-semibold">$160.00</p>
+                        </div>
+                    </div>
+                    <div class="border-t border-primary/20 dark:border-primary/30 my-8"></div>
+                    <div class="space-y-4 text-sm">
+                        <div class="flex justify-between">
+                            <span>Subtotal</span>
+                            <span class="font-medium">$310.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Envío</span>
+                            <span class="font-medium">$100.00</span>
+                        </div>
+                        <div class="border-t border-primary/20 dark:border-primary/30 my-4"></div>
+                        <div class="flex justify-between font-bold text-lg">
+                            <span>Total</span>
+                            <span>$410.00</span>
+                        </div>
+                    </div>
+                    <button id="btnConfirm"
+                        class="w-full mt-8 bg-primary text-white rounded-lg h-12 text-base font-bold tracking-wide hover:bg-opacity-90 transition-all">
+                        Confirmar compra
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('btnConfirm').addEventListener('click', () => {
+            window.location.href = '/confirmacion/'
+        })
+    </script>
+    <script src="../main.js"></script>
+
+</body>
+
+</html>

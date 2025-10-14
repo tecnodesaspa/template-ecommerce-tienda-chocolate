@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sublime Chocolat</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d46211",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221810",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .group:hover .group-hover\:block {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+    <div class="flex flex-col min-h-screen">
+        <header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <h2 class="text-xl font-bold text-gray-900 dark:text-white">Sublime Chocolat</h2>
+                    </div>
+                    <nav class="hidden md:flex items-center gap-8" id="navMenu">
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="/">Inicio</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="/productos/">Productos</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="/nosotros/">Nosotros</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="/contacto/">Contacto</a>
+                    </nav>
+                    <div class="flex items-center gap-3">
+                        <a href="/carrito/"
+                            class="p-2 rounded-full text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.658-.463 1.243-1.117 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.116 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-grow">
+            <section class="relative h-[60vh] min-h-[480px] bg-cover bg-center"
+                style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBk-WfDekd-a5bNmoYdYybtTOX9blEtfHlhMggPEb880w8muWBo0NOXqWtTQ7Gnu_AzTNPODDTsi6Ny_EGx5Bl0sOFOfTTkGeRrmhhpvI90x6MhHbK1K_gOtXYD6ZDXVeUNi2eRAywY8cklDJJvCPmJzzHpFQRETNKA6McZnBn6KIu4n0SAed9vMdBc1z_SIAJ66rvJiBHy_05msxuGc87THctTY8ki6G7AHaXs9_DZqfpV7cv4XdDL8LfdnrDMQWAD9PKW1hM-');">
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-6">
+                    <h1 class="text-4xl md:text-6xl font-black leading-tight tracking-tight">El placer del chocolate
+                        artesanal</h1>
+                    <p class="mt-4 max-w-2xl text-base md:text-lg font-light">Descubre nuestra exquisita selección de
+                        chocolates, elaborados con los mejores ingredientes y una pasión inigualable.</p>
+                    <a href="/productos/"
+                        class="mt-8 bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-all">
+                        Explorar la tienda
+                    </a>
+                </div>
+            </section>
+            <section class="py-16 sm:py-24">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">Nuestros Favoritos
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="group">
+                            <div class="w-full bg-cover bg-center aspect-square rounded-xl overflow-hidden"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDgd73ZsftC8XkVwGzMeOk8PswIh-ZU4v0x5ThJqwvq4nE03ziWL2RnuO8Kmk-YyCqZ3LEz2DPnwUhQm-dFB04OfoCSCuj_h4M9x_3uI7J_4JAOTi1x5rt9C_Mqg5oGfOo7Aw-E4PUPrX12ZXF-yU1u7nqbHUhj7P1gyOdplhUysyYNb76oHfX2Tv3eySwb_4JNz8HI0zNGme0GOvHmlcYgfI8DWLgtpsqAP2DL82mZt6P41rHxdYO98YNZzno3idzZGUF_mqvR');">
+                                <div
+                                    class="w-full h-full bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <button class="bg-primary text-white font-bold py-2 px-5 rounded-lg">Ver
+                                        más</button>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <h3 class="text-lg font-medium text-gray-900 dark:text-white">Trufas artesanales</h3>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Deliciosas trufas con rellenos
+                                    variados</p>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="w-full bg-cover bg-center aspect-square rounded-xl overflow-hidden"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAbHyIv9ZY-vAoSTAUsNN-CGvMLQoXTw1etuiBZZgNXB1RDfUCRA_3PNe25pQMH7J0tvoIjVxgXG9sIclkUe4l0fA9B0TgfWpJKATx32jqjjcZkXPr-0On0-_FR5nV3iqnBeolYs-q0XHGsSEuuwnvORQbIiwDtjt2Tru1naV6XaV3eGYt6sTp7lZIQGbxHLLEJYXVs2AsbHhhioV80Abksns3NH6g0ULNDneePxR_QxQ9Cf-51HYx7yM_8sI6uyNCQW6_-5FnZ');">
+                                <div
+                                    class="w-full h-full bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <button class="bg-primary text-white font-bold py-2 px-5 rounded-lg">Ver
+                                        más</button>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <h3 class="text-lg font-medium text-gray-900 dark:text-white">Barra de chocolate con
+                                    frutos secos</h3>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">Chocolate negro con almendras y
+                                    avellanas</p>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="w-full bg-cover bg-center aspect-square rounded-xl overflow-hidden"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD9ACenBsI4qhr-iedOucG4MypGgjAfIxC_ITesg7WxOgvaLKRE9dm1O7rQ9oiBoiOiJDRBitBsYwGQgZnxj4MYAtXV0AjjX6aiT7tiiPhHHnarRxFzWjBiMeCC-Rr8izZpRP-5xdQ-57RYPhgJhzfOftmlqWvCy1N_fZtDdjzwhkJ1bjrKv31SXVvCsutloO7CcxGodgrpyXSP4MOd00ylvnW3tYFt0lLcwxrrtI47iIufaOr-zdqYtyVwzAuT7SgwkA8F-C6W');">
+                                <div
+                                    class="w-full h-full bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                    <button class="bg-primary text-white font-bold py-2 px-5 rounded-lg">Ver
+                                        más</button>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <h3 class="text-lg font-medium text-gray-900 dark:text-white">Caja de regalo de
+                                    chocolates</h3>
+                                <p class="text-sm text-gray-500 dark:text-gray-400">La selección perfecta para cualquier
+                                    ocasión</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-background-light dark:bg-background-dark py-16 sm:py-24">
+                <div class="container mx-auto px-6">
+                    <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">Lo que dicen nuestros
+                        clientes</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white dark:bg-background-dark/50 p-6 rounded-xl shadow-sm">
+                            <div class="flex items-center mb-4">
+                                <img alt="Sofía García" class="w-12 h-12 rounded-full object-cover mr-4"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXSbA848W9wiTrOD23DfOMI7lb8AcBauuvJIq26Rh7P4spGmaB_MHQeCPpv6gPqJWh5UFJJ03P7W6tFcX80_Uf6j2npx194kuWYpLdWu-cMUSQj6aY2rd5zl302SdGGiuO3fGV_KNa-lzdgAqxorb0CnGtpwGlz7dohJUJi-bD89_HNKJ4JnucTYZZvRB70sxRNWxXwqkiH3HfwWTjFMLYw8UejzR8PWRBh-59O31KMfZ5nNc9Bb9nWb-gkYOIKR1LQtQUb3Bv" />
+                                <div>
+                                    <p class="font-semibold text-gray-900 dark:text-white">Sofía García</p>
+                                    <div class="flex items-center text-primary mt-1">
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">"Los chocolates de Sublime Chocolat son
+                                simplemente divinos. Cada bocado es una explosión de sabor y calidad. ¡Recomendados al
+                                100%!"</p>
+                        </div>
+                        <div class="bg-white dark:bg-background-dark/50 p-6 rounded-xl shadow-sm">
+                            <div class="flex items-center mb-4">
+                                <img alt="Carlos López" class="w-12 h-12 rounded-full object-cover mr-4"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwGHEr-K0pAfKG23bxhvIUwxWizI77qRvRrPo_4mihdeU9qTsjatMN-7SsPNoUuRQTgtag0g7qhMDzS5y0b66uYE5rwNBQcIxmIzOm4r3wrK2Jdp8JnkNVXkD66bhiozRpXIEWsT2KSQzZo-tanogdtau6TmsRzCQmalSsFjX0Or5jyc2nKd9BzjWdy1Y56s46KiDPVMQeim0UqE8TfjaZm-Rs8up9ZTQ7Q4lJU_Qwkelh-4BsZXeQskD75ktR4YIDHTzUOqKI" />
+                                <div>
+                                    <p class="font-semibold text-gray-900 dark:text-white">Carlos López</p>
+                                    <div class="flex items-center text-primary mt-1">
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="h-5 w-5 text-gray-300 dark:text-gray-600" fill="currentColor"
+                                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">"Compré una caja de regalo para mi esposa y le
+                                encantó. Los chocolates son deliciosos y la presentación es impecable."</p>
+                        </div>
+                        <div class="bg-white dark:bg-background-dark/50 p-6 rounded-xl shadow-sm">
+                            <div class="flex items-center mb-4">
+                                <img alt="Ana Martínez" class="w-12 h-12 rounded-full object-cover mr-4"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPjG8Laoh5Mtke0SM76IQJN96wBCyidRMRWO8ni4Zv3C7R5R-MoYzTExOHfUOQ0saUhrp0t7adQMuyZb0nqrkxZdyRiHO6vElf8SVpx-YZ6GfDk1OzFkI2pLq4q_q5mx0etQosBO1Chzd3_lNRb9YAi0jPyI9Fw1q2oazo2Xbx7Lr4pxRmrErwRMaVhZjcpI6YdltFLPsXV64avuFdUwRDhEB2brqZQbEgz3ueRqT7WdW98fCruSx6wfiwgjFz54XN4SOF9RIr" />
+                                <div>
+                                    <p class="font-semibold text-gray-900 dark:text-white">Ana Martínez</p>
+                                    <div class="flex items-center text-primary mt-1">
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">"Soy amante del chocolate y puedo decir que
+                                Sublime Chocolat tiene los mejores chocolates que he probado. La variedad de sabores es
+                                increíble."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 sm:py-24 text-center">
+                <div class="container mx-auto px-6 column gap-8">
+                    <h2 class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white max-w-3xl mx-auto mb-10">
+                        Descubre
+                        el placer del chocolate artesanal</h2>
+                    <a href="/productos/"
+                        class="mt-8 bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition-all">
+                        Explorar la tienda
+                    </a>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-white dark:bg-background-dark/50">
+            <div class="container mx-auto px-6 py-8">
+                <div class="flex flex-col items-center justify-between md:flex-row">
+                    <div class="flex items-center gap-3 mb-4 md:mb-0">
+                        <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <h2 class="text-xl font-bold text-gray-900 dark:text-white">Sublime Chocolat</h2>
+                    </div>
+                    <div class="flex gap-6 justify-center md:justify-start my-4 md:my-0">
+                        <a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">
+                            <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="text-gray-500 dark:text-gray-400 hover:text-primary transition-colors" href="#">
+                            <svg fill="currentColor" height="24px" viewBox="0 0 256 256" width="24px"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">© 2025 Templates Market. Todos los derechos
+                        reservados.</p>
+                </div>
+                <div
+                    class="mt-8 border-t border-gray-200 dark:border-gray-700 pt-8 flex flex-col md:flex-row items-center justify-center gap-x-8 gap-y-4">
+                    <a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
+                        href="/politicas/">Política de privacidad</a>
+                    <a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
+                        href="/terminos/">Términos y condiciones</a>
+                    <a class="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
+                        href="/contacto/">Contacto</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>

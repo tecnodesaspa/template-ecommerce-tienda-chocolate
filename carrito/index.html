@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sublime Chocolat - Carrito</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d46211",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221810",
+                        "foreground-light": "#1b130d",
+                        "foreground-dark": "#f8f7f6",
+                        "subtle-light": "#9a6c4c",
+                        "subtle-dark": "#a18a7a",
+                        "surface-light": "#fcfaf8",
+                        "surface-dark": "#2a1e16",
+                        "border-light": "#f3ece7",
+                        "border-dark": "#3c2e24"
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-foreground-light dark:text-foreground-dark">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <h2 class="text-xl font-bold text-gray-900 dark:text-white">Sublime Chocolat</h2>
+                    </div>
+                    <nav class="hidden md:flex items-center gap-8" id="navMenu">
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="/">Inicio</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="/productos/">Productos</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="/nosotros/">Nosotros</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="/contacto/">Contacto</a>
+                    </nav>
+                    <div class="flex items-center gap-3">
+                        <a href="/carrito/"
+                            class="p-2 rounded-full text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.658-.463 1.243-1.117 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.116 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 px-4 sm:px-6 lg:px-8 xl:px-40 py-12">
+            <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2">
+                    <h2 class="text-3xl font-bold tracking-tight mb-8">Tu Carrito</h2>
+                    <div class="space-y-6">
+                        <div
+                            class="flex items-center gap-4 p-4 rounded-lg bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark">
+                            <div class="flex-shrink-0">
+                                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded size-20"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHU96-WMao7vqx4tJdWz3InE6KpH3Ohwa6JyZLSnYLscJAj1733ei2lT4bJqN3cjFAJpEJEICn8Bpgn7UjGAS1psEbLNnw1KLpBWJJA6cWZAi4GzLU_A7_kshyffyDrdfUMDmgtB5CRQRbEixMRa9ZIyGPoGrWIEZtt7ku4wOVbpSq6Xzh32cV2jh_eJK1ULwJ29J_PjH6bTcNKzsP2eDC_9pfEAWJB-5BkYKm04R6Q-Ittznlt51Ur8xcYF9g5PxQ2mCkVlNF");'>
+                                </div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-semibold truncate">Caja de Bombones Surtidos</h3>
+                                <div class="flex items-center gap-4 mt-2">
+                                    <div
+                                        class="flex items-center border border-border-light dark:border-border-dark rounded">
+                                        <button
+                                            class="px-2 py-1 text-subtle-light dark:text-subtle-dark hover:text-foreground-light dark:hover:text-foreground-dark">-</button>
+                                        <span class="px-3 py-1 text-sm">2</span>
+                                        <button
+                                            class="px-2 py-1 text-subtle-light dark:text-subtle-dark hover:text-foreground-light dark:hover:text-foreground-dark">+</button>
+                                    </div>
+                                    <button
+                                        class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors">Eliminar</button>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-semibold">$15.00</p>
+                                <p class="text-sm text-subtle-light dark:text-subtle-dark line-through">$30.00</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-4 p-4 rounded-lg bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark">
+                            <div class="flex-shrink-0">
+                                <div class="bg-center bg-no-repeat aspect-square bg-cover rounded size-20"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD7XPdp_FwFpo9m0aGp2TIRmqKt7U5IQCkLsNc8MJPk-DCerLec5jbE3RcIE-a4OrXkcPRHZjmtkCl6tM-pRZBMgHiYCAPdO2FnZC-isTXpAKAXjIDLNBFKu4u1Odt7roUKIkI5GUFPLMfgD0WDXX-7o2FjToctIoPGygDYZFDcxsowtxrB7jeeYwDEDzF2gdI_kFbkpgybKGYBkJPa1NuBJTjKDCoAx3KOvB_ZJ2VDTnFvzqYs782wo-L7a2YFz1J8-_3dQZe2");'>
+                                </div>
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="font-semibold truncate">Tableta de Chocolate Negro 70%</h3>
+                                <div class="flex items-center gap-4 mt-2">
+                                    <div
+                                        class="flex items-center border border-border-light dark:border-border-dark rounded">
+                                        <button
+                                            class="px-2 py-1 text-subtle-light dark:text-subtle-dark hover:text-foreground-light dark:hover:text-foreground-dark">-</button>
+                                        <span class="px-3 py-1 text-sm">1</span>
+                                        <button
+                                            class="px-2 py-1 text-subtle-light dark:text-subtle-dark hover:text-foreground-light dark:hover:text-foreground-dark">+</button>
+                                    </div>
+                                    <button
+                                        class="text-sm text-subtle-light dark:text-subtle-dark hover:text-primary transition-colors">Eliminar</button>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="font-semibold">$10.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="inline-flex items-center gap-2 mt-8 text-primary hover:underline" href="/productos/">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        Seguir comprando
+                    </a>
+                </div>
+                <div class="lg:col-span-1">
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark rounded-lg border border-border-light dark:border-border-dark p-6 sticky top-28">
+                        <h3 class="text-xl font-bold mb-6">Resumen del Pedido</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-subtle-light dark:text-subtle-dark">Subtotal</span>
+                                <span>$40.00</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-subtle-light dark:text-subtle-dark">Envío</span>
+                                <span>Gratis</span>
+                            </div>
+                            <div class="border-t border-border-light dark:border-border-dark my-4"></div>
+                            <div class="flex justify-between font-bold text-lg">
+                                <span>Total</span>
+                                <span>$40.00</span>
+                            </div>
+                        </div>
+                        <a href="/pago/"
+                            class="w-full mt-8 flex items-center justify-center rounded-lg h-12 px-5 bg-primary text-white text-base font-bold tracking-wide hover:bg-primary/90 transition-all">
+                            Proceder al Pago
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Sublime Chocolat - Política de Privacidad</title>
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Epilogue:wght@400;500;700;900"
+    onload="this.rel='stylesheet'" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#d46211",
+            "background-light": "#f8f7f6",
+            "background-dark": "#221810",
+          },
+          fontFamily: {
+            "display": ["Epilogue"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+  <div class="relative flex min-h-screen w-full flex-col">
+    <header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"
+                fill="currentColor"></path>
+            </svg>
+            <h2 class="text-xl font-bold text-gray-900 dark:text-white">Sublime Chocolat</h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-8" id="navMenu">
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="/">Inicio</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="/productos/">Productos</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="/nosotros/">Nosotros</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="/contacto/">Contacto</a>
+          </nav>
+          <div class="flex items-center gap-3">
+            <a href="/carrito/"
+              class="p-2 rounded-full text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.658-.463 1.243-1.117 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.116 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+            <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-12 text-center">
+          <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight">Política de
+            Privacidad</h1>
+          <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Última actualización: 1 de agosto de 2024</p>
+        </div>
+        <div class="space-y-10 text-gray-700 dark:text-gray-300">
+          <div class="prose dark:prose-invert max-w-none">
+            <p class="lead">
+              En Sublime Chocolat, valoramos y respetamos su privacidad. Esta Política de Privacidad describe cómo
+              recopilamos, utilizamos y protegemos su información personal cuando visita nuestro sitio web o realiza
+              compras en nuestra tienda en línea.
+            </p>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Información que Recopilamos</h2>
+            <p>
+              Podemos recopilar la siguiente información personal cuando interactúa con nosotros:
+            </p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li><strong>Información de contacto:</strong> Nombre, dirección de correo electrónico, número de teléfono
+                y dirección de envío.</li>
+              <li><strong>Información de pago:</strong> Detalles de la tarjeta de crédito o débito, información de
+                facturación.</li>
+              <li><strong>Información de la cuenta:</strong> Nombre de usuario y contraseña (si crea una cuenta).</li>
+              <li><strong>Información de pedidos:</strong> Detalles de los productos comprados, historial de pedidos.
+              </li>
+              <li><strong>Información de navegación:</strong> Dirección IP, tipo de navegador, páginas visitadas y
+                tiempo de permanencia en el sitio.</li>
+            </ul>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Cómo Utilizamos su Información</h2>
+            <p>
+              Utilizamos su información personal para los siguientes propósitos:
+            </p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>Procesar y completar sus pedidos.</li>
+              <li>Comunicarnos con usted sobre sus pedidos y consultas.</li>
+              <li>Mejorar nuestro sitio web y servicios.</li>
+              <li>Personalizar su experiencia de compra.</li>
+              <li>Enviarle correos electrónicos promocionales y boletines informativos (si se suscribe).</li>
+              <li>Cumplir con nuestras obligaciones legales.</li>
+            </ul>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Protección de su Información</h2>
+            <p>
+              Implementamos medidas de seguridad técnicas y organizativas para proteger su información personal contra
+              el acceso no autorizado, la alteración, la divulgación o la destrucción. Utilizamos tecnología de
+              encriptación para proteger la información confidencial transmitida en línea.
+            </p>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Compartir su Información</h2>
+            <p>
+              Podemos compartir su información personal con terceros en las siguientes circunstancias:
+            </p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li><strong>Proveedores de servicios:</strong> Empresas que nos ayudan a operar nuestro negocio (por
+                ejemplo, procesadores de pagos, empresas de envío).</li>
+              <li><strong>Cumplimiento legal:</strong> Si estamos obligados a divulgar su información por ley.</li>
+              <li><strong>Otros terceros:</strong> Con su consentimiento explícito.</li>
+            </ul>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Sus Derechos</h2>
+            <p>
+              Usted tiene derecho a:
+            </p>
+            <ul class="list-disc pl-5 space-y-2">
+              <li>Acceder a su información personal.</li>
+              <li>Corregir información inexacta.</li>
+              <li>Solicitar la eliminación de su información.</li>
+              <li>Oponerse al procesamiento de su información.</li>
+              <li>Retirar su consentimiento en cualquier momento (si el procesamiento se basa en el consentimiento).
+              </li>
+            </ul>
+            <p class="mt-4">Para ejercer estos derechos, contáctenos a través de los datos proporcionados en la sección
+              de contacto.</p>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Cambios en esta Política</h2>
+            <p>
+              Podemos actualizar esta Política de Privacidad periódicamente. Le notificaremos cualquier cambio
+              significativo publicando la nueva política en nuestro sitio web.
+            </p>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Contacto</h2>
+            <p>
+              Si tiene alguna pregunta o inquietud sobre esta Política de Privacidad, puede contactarnos en:
+            </p>
+            <address
+              class="not-italic bg-background-light dark:bg-background-dark p-4 rounded-lg border border-primary/20 dark:border-primary/30">
+              Sublime Chocolat<br />
+              Calle Falsa 123<br />
+              Ciudad, País<br />
+              Correo electrónico: <a class="text-primary hover:underline"
+                href="mailto:contacto@sublimechocolat.com">contacto@sublimechocolat.com</a><br />
+              Teléfono: +123 456 7890
+            </address>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="../main.js"></script>
+</body>
+
+</html>

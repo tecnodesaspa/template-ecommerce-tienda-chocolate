@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sublime Chocolat - Términos y Condiciones</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d46211",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221810",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .prose-custom {
+            --tw-prose-body: #221810;
+            --tw-prose-headings: #221810;
+            --tw-prose-bold: #221810;
+            --tw-prose-links: #d46211;
+        }
+
+        .dark .prose-custom {
+            --tw-prose-body: #f8f7f6;
+            --tw-prose-headings: #f8f7f6;
+            --tw-prose-bold: #f8f7f6;
+            --tw-prose-links: #d46211;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+    <div class="flex flex-col min-h-screen">
+        <header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <h2 class="text-xl font-bold text-gray-900 dark:text-white">Sublime Chocolat</h2>
+                    </div>
+                    <nav class="hidden md:flex items-center gap-8" id="navMenu">
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="/">Inicio</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="/productos/">Productos</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="/nosotros/">Nosotros</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="/contacto/">Contacto</a>
+                    </nav>
+                    <div class="flex items-center gap-3">
+                        <a href="/carrito/"
+                            class="p-2 rounded-full text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.658-.463 1.243-1.117 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.116 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-12 text-center">
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-background-dark dark:text-background-light">
+                        Términos y Condiciones</h2>
+                    <p class="mt-4 text-lg text-background-dark/70 dark:text-background-light/70">Última actualización:
+                        1 de Agosto de 2024</p>
+                </div>
+                <div class="prose prose-custom dark:prose-invert prose-lg max-w-none space-y-8">
+                    <section>
+                        <h3 class="font-bold text-2xl">1. Introducción</h3>
+                        <p>Bienvenido a la tienda online de Sublime Chocolat. Al acceder y utilizar nuestro sitio web,
+                            usted acepta cumplir con estos Términos y Condiciones. Si no está de acuerdo con alguna
+                            parte de estos términos, por favor, no utilice nuestro sitio.</p>
+                    </section>
+                    <section>
+                        <h3 class="font-bold text-2xl">2. Derechos y Responsabilidades del Usuario</h3>
+                        <p>Usted es responsable de mantener la confidencialidad de su cuenta y contraseña, y de
+                            restringir el acceso a su computadora. Usted acepta la responsabilidad de todas las
+                            actividades que ocurran bajo su cuenta o contraseña. Nos reservamos el derecho de rechazar
+                            el servicio, cancelar cuentas, eliminar o editar contenido, o cancelar pedidos a nuestra
+                            discreción.</p>
+                    </section>
+                    <section>
+                        <h3 class="font-bold text-2xl">3. Condiciones de Compra</h3>
+                        <p>Al realizar un pedido, usted está ofreciendo comprar un producto sujeto a estos términos.
+                            Todos los pedidos están sujetos a disponibilidad y confirmación del precio del pedido. Los
+                            tiempos de envío pueden variar según la disponibilidad y cualquier garantía o representación
+                            hecha en cuanto a los tiempos de entrega están sujetas a cualquier retraso resultante de
+                            retrasos postales o fuerza mayor por los cuales no seremos responsables.</p>
+                    </section>
+                    <section>
+                        <h3 class="font-bold text-2xl">4. Envíos y Devoluciones</h3>
+                        <p>Los envíos se realizarán a la dirección proporcionada por el cliente. No nos hacemos
+                            responsables de los envíos a direcciones incorrectas. Si no está completamente satisfecho
+                            con su compra, puede devolver el producto en su estado original dentro de los 14 días para
+                            un reembolso o cambio. Los gastos de envío de las devoluciones corren por cuenta del
+                            cliente, a menos que el producto esté defectuoso o haya sido enviado incorrectamente.</p>
+                    </section>
+                    <section>
+                        <h3 class="font-bold text-2xl">5. Propiedad Intelectual</h3>
+                        <p>Todo el contenido incluido en este sitio, como texto, gráficos, logotipos, imágenes, clips de
+                            audio, descargas digitales y compilaciones de datos, es propiedad de Sublime Chocolat o sus
+                            proveedores de contenido y está protegido por las leyes de propiedad intelectual. No se
+                            permite la reproducción, distribución o uso de cualquier contenido sin nuestro
+                            consentimiento expreso por escrito.</p>
+                    </section>
+                    <section>
+                        <h3 class="font-bold text-2xl">6. Modificaciones</h3>
+                        <p>Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento. Los
+                            cambios y aclaraciones entrarán en vigor inmediatamente después de su publicación en el
+                            sitio web. Su uso continuado del sitio después de la publicación de cualquier cambio
+                            constituye su aceptación de los nuevos Términos y Condiciones.</p>
+                    </section>
+                    <section>
+                        <h3 class="font-bold text-2xl">7. Contacto</h3>
+                        <p>Si tiene alguna pregunta sobre estos Términos y Condiciones, por favor, contáctenos a través
+                            de nuestro <a class="font-semibold hover:underline" href="#">formulario de contacto</a> en
+                            el sitio web o a través de la información de contacto proporcionada en la sección
+                            'Contacto'.</p>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-background-dark/5 dark:bg-background-light/5">
+            <div class="container mx-auto px-4 text-center sm:px-6 lg:px-8 py-12">
+                    <p class="text-sm text-background-dark/60 dark:text-background-light/60">© 2025 Templates Market.
+                        Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="../main.js"></script>
+</body>
+
+</html>

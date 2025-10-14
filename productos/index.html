@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sublime Chocolat</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d46211",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221810",
+                    },
+                    fontFamily: {
+                        "display": ["Epilogue"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+        .pointer{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-stone-800 dark:text-stone-200">
+    <div class="flex flex-col min-h-screen">
+        <header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <h2 class="text-xl font-bold text-gray-900 dark:text-white">Sublime Chocolat</h2>
+                    </div>
+                    <nav class="hidden md:flex items-center gap-8" id="navMenu">
+                        <a class="text-sm font-medium hover:text-primary transition-colors" href="/">Inicio</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="/productos/">Productos</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="/nosotros/">Nosotros</a>
+                        <a class="text-sm font-medium hover:text-primary transition-colors"
+                            href="/contacto/">Contacto</a>
+                    </nav>
+                    <div class="flex items-center gap-3">
+                        <a href="/carrito/"
+                            class="p-2 rounded-full text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.658-.463 1.243-1.117 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.116 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </a>
+                        <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <aside class="w-full lg:w-64">
+                    <h2 class="text-2xl font-bold mb-6 text-stone-900 dark:text-white">Filtros</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="font-semibold mb-3 text-stone-800 dark:text-stone-200">Categorías</h3>
+                            <div class="flex flex-wrap gap-2">
+                                <button class="px-4 py-2 text-sm rounded-full bg-primary text-white">Todos</button>
+                                <button
+                                    class="px-4 py-2 text-sm rounded-full bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">Negro</button>
+                                <button
+                                    class="px-4 py-2 text-sm rounded-full bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">Con
+                                    Leche</button>
+                                <button
+                                    class="px-4 py-2 text-sm rounded-full bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">Blanco</button>
+                                <button
+                                    class="px-4 py-2 text-sm rounded-full bg-stone-200 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors">Rellenos</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-3 text-stone-800 dark:text-stone-200">Rango de Precios</h3>
+                            <input
+                                class="w-full h-2 bg-stone-200 dark:bg-stone-700 rounded-lg appearance-none cursor-pointer accent-primary"
+                                max="100" min="0" type="range" value="50" />
+                            <div class="flex justify-between text-sm text-stone-600 dark:text-stone-400 mt-2">
+                                <span>$0</span>
+                                <span>$100</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-3 text-stone-800 dark:text-stone-200">Ocasiones</h3>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input
+                                        class="h-4 w-4 rounded border-stone-300 dark:border-stone-600 text-primary focus:ring-primary bg-stone-100 dark:bg-stone-900"
+                                        type="checkbox" />
+                                    <span class="ml-2 text-sm text-stone-700 dark:text-stone-300">Regalos</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input
+                                        class="h-4 w-4 rounded border-stone-300 dark:border-stone-600 text-primary focus:ring-primary bg-stone-100 dark:bg-stone-900"
+                                        type="checkbox" />
+                                    <span class="ml-2 text-sm text-stone-700 dark:text-stone-300">Celebraciones</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input
+                                        class="h-4 w-4 rounded border-stone-300 dark:border-stone-600 text-primary focus:ring-primary bg-stone-100 dark:bg-stone-900"
+                                        type="checkbox" />
+                                    <span class="ml-2 text-sm text-stone-700 dark:text-stone-300">Para compartir</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <div class="flex-1">
+                    <div class="mb-6">
+                        <div class="relative">
+                            <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                                <svg class="h-5 w-5 text-stone-500 dark:text-stone-400" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <input
+                                class="w-full pl-12 pr-4 py-3 rounded-lg border bg-background-light dark:bg-background-dark border-stone-200 dark:border-stone-700 text-stone-900 dark:text-stone-100 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-lg"
+                                placeholder="Buscar chocolates..." type="search" />
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        <div class="group pointer" name="item">
+                            <div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden mb-4"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIyw7_7k4HbKYs3-kAm9mCi9dUamef0rJ1UoWnv9QOZwXigxgpZRtO5CIZE81pI1Bk58zDozAzehV7j7WynAhIpkTkczjn1QiFnWXnMWp9nwE2ccy9YITSmUWR8nNRK7h7bpcaoGXSphwb58AYvXvbHr3bZAuMW7V_HTUeVRnBT81E-du25Qru965w-Xa_ytu1qdH1_NSXW_YympboKNB2GCkVeSft6h8d0ITykcxsAprcKXRixZS_4QzlDWROEu4hIB_LZG3C");'>
+                            </div>
+                            <h3 class="font-bold text-lg text-stone-800 dark:text-stone-200">Chocolate Negro Intenso
+                            </h3>
+                            <p class="text-stone-600 dark:text-stone-400 text-sm">Sabor profundo y rico</p>
+                            <p class="font-bold text-primary mt-2">$12.50</p>
+                        </div>
+                        <div class="group pointer" name="item">
+                            <div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden mb-4"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAq8TOOHpS2YRNhW4mcDljvJmNVBAUP9GtDHaCCqNa88MQQl-8kHUIgKmTBayMS4AKqCvz523wk3B16ALfSdLo1xjPYiqZDoZiKKM5OZi5chqPaOvLf1kneUhq3UATA0678qkEny7tqrSSUgNlvklp9sNYJnnLLazJszUzdPIBtldt-XynVtGr0EP708yA9A_67R1FqkHqM8YsRFF9YK9T8sY3RsQZnptB1VY9AyD6QYWxWxeJGPgGns3P8QztOIZcvt4-XBk1A");'>
+                            </div>
+                            <h3 class="font-bold text-lg text-stone-800 dark:text-stone-200">Chocolate con Leche Clásico
+                            </h3>
+                            <p class="text-stone-600 dark:text-stone-400 text-sm">Suave y reconfortante</p>
+                            <p class="font-bold text-primary mt-2">$9.99</p>
+                        </div>
+                        <div class="group pointer" name="item">
+                            <div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden mb-4"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNURVhad40TQk4GAXHeeCU6p_6hfTsGd-NEQPNRQVXTxDzrQlKh2FksNmYSr5hIqD9gtUS5EOwQeW1mgkrjxlt1XDen1Ctrh2zhqf5N47rAXWmO5Lv5U9LFWGsPxZODbGAYQFHUgeVWGRdPFgAh6eZxNDxHST1W4IM9barnOBUJlZLsvcNMvqURCQxph2_fnWDPb6KWJl2bIMg3WQCRpD369PdeBy_sTeIoKhxi3fSQZ6AWfRSCi6F2eZ_xAF7RjCFOuItFkbJ");'>
+                            </div>
+                            <h3 class="font-bold text-lg text-stone-800 dark:text-stone-200">Chocolate Blanco Cremoso
+                            </h3>
+                            <p class="text-stone-600 dark:text-stone-400 text-sm">Delicado y dulce</p>
+                            <p class="font-bold text-primary mt-2">$10.75</p>
+                        </div>
+                        <div class="group pointer" name="item">
+                            <div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden mb-4"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDsg7wGsqyYQbrT9eaKL5EePDMcjLL1PXhCUQbUk2nI1QBHVg5olFGFrqQxoli63Zy42FCTJjTkcB7s-UGtlv_VLjVCIc9QJhCFPzXqakOFl80_606JnlqQboV-Xz3J87UK_QmkCwfLOOJ5ksJJnbyCpHSvxiXYeyv-6Y3noh8djQET9-B9WioLys1YluELy0JwGpjWKXnZ6nvr8s-j7kgo_FPpqLCFywpujAM6d5EuMJFH1C_2y4D7QrvDWtrsCK0ZgKpoahut");'>
+                            </div>
+                            <h3 class="font-bold text-lg text-stone-800 dark:text-stone-200">Chocolate Negro con
+                                Almendras</h3>
+                            <p class="text-stone-600 dark:text-stone-400 text-sm">Crujiente y oscuro</p>
+                            <p class="font-bold text-primary mt-2">$14.00</p>
+                        </div>
+                        <div class="group pointer" name="item">
+                            <div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden mb-4"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC5bz3f93Vzj323f24LJ0YxFlHtwsQK8VKJ__CsEPWwYjj4Mo5r8TZRTvz543M4eeDuhJyaoKcN5JpnHRgMCXlOvTYS-rXbUb0Z16O9aOYDNnZpHnDpahWjLsAL9vIvMA5Oz61kxvUURd1ubTMc87CobH3QBNCJmcSjIojkU2i0JLVXz3cWAs_lSv5F6l7mbaR6I7TGy3O_rVULlEuRWU3RnhzEyIiUWLV8IQHEqOIncL6ssB7ateS20WFgLTnP3zuTmaIKQp4o");'>
+                            </div>
+                            <h3 class="font-bold text-lg text-stone-800 dark:text-stone-200">Chocolate con Leche y
+                                Avellanas</h3>
+                            <p class="text-stone-600 dark:text-stone-400 text-sm">Cremoso y con frutos secos</p>
+                            <p class="font-bold text-primary mt-2">$13.25</p>
+                        </div>
+                        <div class="group pointer" name="item">
+                            <div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden mb-4"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDF0D5qWPocKDwtPw757ZWB7Ko0D-F18RA_tdt4sEzV8KS4gM0Fy9PdAXESc7IDzbLSlIe8h0d1cEyGdynfOb1yAnPDItg4bsorOYMU326Dsn0rH7NWgUy6qzfHcL9CrUhTvbridAdM47X8-DoRLXy9k1CzxMtXo2QndhJ5NWWNQCYumzHfeRLRh2gFHQgfGSPZycORgS6kR_hRsMXNWvXNpOxD_PTFkt4V-fgSeRZLIXc0oBNY_1Ac8l0WjYxsbVo7CEgy8uOf");'>
+                            </div>
+                            <h3 class="font-bold text-lg text-stone-800 dark:text-stone-200">Chocolate Blanco con Frutas
+                            </h3>
+                            <p class="text-stone-600 dark:text-stone-400 text-sm">Refrescante y afrutado</p>
+                            <p class="font-bold text-primary mt-2">$11.50</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center mt-12 space-x-2">
+                        <a class="h-10 w-10 flex items-center justify-center rounded-full text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors"
+                            href="#">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd"
+                                    d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a class="h-10 w-10 flex items-center justify-center rounded-full bg-primary text-white font-bold"
+                            href="#">1</a>
+                        <a class="h-10 w-10 flex items-center justify-center rounded-full text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors font-medium"
+                            href="#">2</a>
+                        <a class="h-10 w-10 flex items-center justify-center rounded-full text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors font-medium"
+                            href="#">3</a>
+                        <a class="h-10 w-10 flex items-center justify-center rounded-full text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors"
+                            href="#">
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path clip-rule="evenodd"
+                                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.getElementsByName('item').forEach(element => element.addEventListener('click', () => {
+            window.location.href = '/detalle-producto/'
+        }))
+    </script>
+    <script src="../main.js"></script>
+</body>
+
+</html>

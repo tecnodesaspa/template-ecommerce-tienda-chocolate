@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Sublime Chocolat - Pedido Confirmado</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#d46211",
+            "background-light": "#f8f7f6",
+            "background-dark": "#221810",
+          },
+          fontFamily: {
+            "display": ["Epilogue"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-background-dark dark:text-background-light">
+  <div class="relative flex min-h-screen w-full flex-col">
+    <header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"
+                fill="currentColor"></path>
+            </svg>
+            <h2 class="text-xl font-bold text-gray-900 dark:text-white">Sublime Chocolat</h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-8" id="navMenu">
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="/">Inicio</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="/productos/">Productos</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="/nosotros/">Nosotros</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="/contacto/">Contacto</a>
+          </nav>
+          <div class="flex items-center gap-3">
+            <a href="/carrito/"
+              class="p-2 rounded-full text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.658-.463 1.243-1.117 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.116 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+            <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex flex-1 justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div class="w-full max-w-4xl space-y-8">
+        <div class="text-center">
+          <svg class="mx-auto h-12 w-12 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2"></path>
+          </svg>
+          <h1
+            class="mt-4 text-3xl font-extrabold tracking-tight text-background-dark dark:text-background-light sm:text-4xl">
+            ¡Tu pedido ha sido confirmado!</h1>
+          <p class="mt-4 max-w-2xl mx-auto text-base text-background-dark/70 dark:text-background-light/70">Gracias por
+            tu compra en Sublime Chocolat. Estamos preparando tu pedido y te notificaremos cuando sea enviado.</p>
+        </div>
+        <div
+          class="bg-background-light dark:bg-background-dark/50 border border-primary/20 dark:border-primary/30 rounded-lg shadow-sm p-6 space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+            <h2 class="text-lg font-semibold">Número de Pedido</h2>
+            <p class="mt-1 sm:mt-0 text-primary font-mono text-lg">123456789</p>
+          </div>
+          <div class="border-t border-primary/20 dark:border-primary/30"></div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Resumen del Pedido</h3>
+            <div class="flow-root">
+              <div class="-my-4 divide-y divide-primary/20 dark:divide-primary/30">
+                <div class="flex items-center justify-between py-4">
+                  <p class="font-medium">Caja de Bombones Variados (x1)</p>
+                  <p class="font-medium text-background-dark/80 dark:text-background-light/80">25.00€</p>
+                </div>
+                <div class="flex items-center justify-between py-4">
+                  <p class="font-medium">Tableta de Chocolate Negro 70% (x2)</p>
+                  <p class="font-medium text-background-dark/80 dark:text-background-light/80">10.00€</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border-t border-primary/20 dark:border-primary/30 mt-4 pt-4 flex justify-between font-bold text-lg">
+              <span>Total</span>
+              <span>35.00€</span>
+            </div>
+          </div>
+          <div class="border-t border-primary/20 dark:border-primary/30"></div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 class="text-lg font-semibold">Dirección de Envío</h3>
+              <p class="mt-2 text-background-dark/70 dark:text-background-light/70">
+                Calle Principal, 123<br />
+                Ciudad, Provincia<br />
+                Código Postal
+              </p>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold">Fecha Estimada de Entrega</h3>
+              <p class="mt-2 text-background-dark/70 dark:text-background-light/70">Entre el 15 y el 18 de Julio</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 flex flex-col sm:flex-row sm:justify-center gap-4">
+          <a href="/productos/"
+            class="flex w-full sm:w-auto items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-sm font-bold tracking-wide shadow-lg hover:opacity-90 transition-opacity">
+            Ver mas productos
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="../main.js"></script>
+
+</body>
+
+</html>

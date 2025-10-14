@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Sublime Chocolat - Sobre Nosotros</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;700;900&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#d46211",
+            "background-light": "#f8f7f6",
+            "background-dark": "#221810",
+          },
+          fontFamily: {
+            "display": ["Epilogue"],
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    };
+  </script>
+  <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#221810] dark:text-[#f8f7f6]">
+  <div class="relative flex min-h-screen w-full flex-col">
+    <header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <svg class="h-6 w-6 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"
+                fill="currentColor"></path>
+            </svg>
+            <h2 class="text-xl font-bold text-gray-900 dark:text-white">Sublime Chocolat</h2>
+          </div>
+          <nav class="hidden md:flex items-center gap-8" id="navMenu">
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="/">Inicio</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="/productos/">Productos</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="/nosotros/">Nosotros</a>
+            <a class="text-sm font-medium hover:text-primary transition-colors" href="/contacto/">Contacto</a>
+          </nav>
+          <div class="flex items-center gap-3">
+            <a href="/carrito/"
+              class="p-2 rounded-full text-stone-600 dark:text-stone-300 hover:bg-stone-200 dark:hover:bg-stone-800 transition-colors">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.658-.463 1.243-1.117 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.116 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+            <button class="md:hidden text-gray-900 dark:text-white" id="btnMenu">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="flex-1">
+      <div class="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-4xl">
+          <div class="mb-12 text-center">
+            <h1
+              class="text-4xl font-extrabold tracking-tight text-[#221810] dark:text-[#f8f7f6] sm:text-5xl lg:text-6xl">
+              La Pasión Detrás de Cada Bocado
+            </h1>
+            <p class="mt-6 max-w-2xl mx-auto text-lg leading-8 text-[#221810]/80 dark:text-[#f8f7f6]/80">
+              En Sublime Chocolat, cada chocolate es una obra de arte, una historia de tradición familiar, ingredientes
+              puros y un amor incondicional por la artesanía.
+            </p>
+          </div>
+          <div class="space-y-16">
+            <section>
+              <h2 class="text-3xl font-bold tracking-tight text-primary">Nuestra Historia</h2>
+              <p class="mt-4 text-base leading-7 text-[#221810]/90 dark:text-[#f8f7f6]/90">
+                La historia de Sublime Chocolat comenzó hace más de 50 años, cuando la abuela Elena, una apasionada
+                chocolatera, decidió compartir sus creaciones con el mundo. Sus recetas secretas, elaboradas con amor y
+                dedicación, se convirtieron en la base de nuestra empresa. Hoy en día, seguimos sus pasos, manteniendo
+                la esencia artesanal y la calidad que siempre nos ha caracterizado.
+              </p>
+            </section>
+            <section>
+              <h2 class="text-3xl font-bold tracking-tight text-primary">Nuestra Filosofía</h2>
+              <p class="mt-4 text-base leading-7 text-[#221810]/90 dark:text-[#f8f7f6]/90">
+                En Sublime Chocolat, creemos que el chocolate es mucho más que un simple dulce. Es una experiencia
+                sensorial que debe disfrutarse plenamente. Por eso, nos esforzamos por crear chocolates que despierten
+                tus emociones, te hagan sonreír y te dejen un recuerdo inolvidable. Nuestra filosofía se basa en tres
+                pilares fundamentales: calidad, tradición e innovación.
+              </p>
+            </section>
+            <div class="w-full overflow-hidden rounded-xl">
+              <div class="aspect-w-16 aspect-h-9 bg-cover bg-center"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAGPxNDASF32jI2_NfFRD-_4D8l1TzYHIzcR4nn2RI9pyXxwsWEJgLUXb0WN9jINx91R9CjJbWfyADxlHQfrbrOF3774a3eD5SobWxtmAYh0XvMhFTqkNOhuSxa8vPteuwRtMM-ygaUwaK_xKI5M7fdYoAQLWzF8TF944g17nXyGDzUaj0uHHfA6dAItOAEybzLPaFyEEREoysLTQulR8CZ1VHVwPjQlwy2NVYtIfEEs5TBxmA2caMxvuq2212z1hXRt96LcjaY");'>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+              <section>
+                <h2 class="text-3xl font-bold tracking-tight text-primary">Ingredientes de Origen</h2>
+                <p class="mt-4 text-base leading-7 text-[#221810]/90 dark:text-[#f8f7f6]/90">
+                  Seleccionamos cuidadosamente los mejores granos de cacao de origen, provenientes de plantaciones
+                  sostenibles y respetuosas con el medio ambiente. Trabajamos en estrecha colaboración con agricultores
+                  locales para garantizar la calidad y trazabilidad de nuestros ingredientes.
+                </p>
+              </section>
+              <section>
+                <h2 class="text-3xl font-bold tracking-tight text-primary">Elaboración Artesanal</h2>
+                <p class="mt-4 text-base leading-7 text-[#221810]/90 dark:text-[#f8f7f6]/90">
+                  Nuestros chocolates se elaboran de forma artesanal, siguiendo técnicas tradicionales que hemos
+                  perfeccionado a lo largo de los años. Cada paso del proceso, desde la selección de los granos de cacao
+                  hasta el envasado final, se realiza con mimo y atención al detalle.
+                </p>
+              </section>
+            </div>
+            <section>
+              <h2 class="text-3xl font-bold tracking-tight text-primary">Nuestros Valores</h2>
+              <ul class="mt-4 space-y-3 text-base leading-7 text-[#221810]/90 dark:text-[#f8f7f6]/90">
+                <li><strong class="font-semibold text-[#221810] dark:text-[#f8f7f6]">Calidad:</strong> Buscamos la
+                  excelencia en cada uno de nuestros productos, utilizando solo los mejores ingredientes.</li>
+                <li><strong class="font-semibold text-[#221810] dark:text-[#f8f7f6]">Tradición:</strong> Mantenemos viva
+                  la esencia de la chocolatería tradicional.</li>
+                <li><strong class="font-semibold text-[#221810] dark:text-[#f8f7f6]">Innovación:</strong> Exploramos
+                  nuevas combinaciones de sabores para sorprenderte.</li>
+                <li><strong class="font-semibold text-[#221810] dark:text-[#f8f7f6]">Sostenibilidad:</strong> Nos
+                  preocupamos por el medio ambiente y nuestras comunidades.</li>
+                <li><strong class="font-semibold text-[#221810] dark:text-[#f8f7f6]">Pasión:</strong> Amamos lo que
+                  hacemos y ponemos nuestro corazón en cada chocolate.</li>
+              </ul>
+            </section>
+            <div class="w-full overflow-hidden rounded-xl">
+              <div class="aspect-w-16 aspect-h-9 bg-cover bg-center"
+                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBD9I6zXXmArX8SFDAyV8nkpvH1lz5nU0YOSaadZkP3CimtDjBwa154ymB1e0uaMHyboMaoHewprfAFK-SBDd97IYUVs9XUqyFNSmPb-PL4yYUIm2GKJU7N1JOVnfK1jEaW9260z7vnuEbHH2sFUD4Psu6bHr8PoEqmPKLoKRmFATpyAwxJ2GhzSO9Mw-vDBtjcrlcvy9tY4aZu_Glb3UjCoBDS_eLIWse7vN7LCbKqDC62OwxsEXkfcOKeMH5whO9n-jZWBcoa");'>
+              </div>
+            </div>
+            <section class="text-center">
+              <h2 class="text-3xl font-bold tracking-tight text-primary">Nuestro Equipo</h2>
+              <p class="mt-4 max-w-2xl mx-auto text-base leading-7 text-[#221810]/90 dark:text-[#f8f7f6]/90">
+                Somos un equipo de apasionados chocolateros, unidos por el amor al chocolate y el deseo de crear
+                productos excepcionales. Cada miembro de nuestro equipo aporta su experiencia y creatividad para hacer
+                de Sublime Chocolat una empresa única.
+              </p>
+            </section>
+            <div class="text-center">
+              <h2 class="text-3xl font-bold tracking-tight text-primary">Contáctanos</h2>
+              <p class="mt-4 max-w-2xl mx-auto text-base leading-7 text-[#221810]/90 dark:text-[#f8f7f6]/90">
+                Si tienes alguna pregunta o quieres saber más sobre nosotros, no dudes en contactarnos. Estaremos
+                encantados de atenderte.
+              </p>
+              <div class="mt-8">
+                <a class="inline-block rounded-lg bg-primary px-6 py-3 text-base font-bold text-white shadow-md transition-transform hover:scale-105"
+                  href="/contacto/">
+                  Contactar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="../main.js"></script>
+
+</body>
+
+</html>
