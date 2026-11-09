@@ -1,7 +1,7 @@
  const btnMenu = document.getElementById('btnMenu');
   const navMenu = document.getElementById('navMenu');
 
-  btnMenu.addEventListener('click', () => {
+  btnMenu?.addEventListener('click', () => {
     // Si está oculto, lo mostramos tipo bloque vertical
     if (navMenu.classList.contains('hidden')) {
       navMenu.classList.remove('hidden');

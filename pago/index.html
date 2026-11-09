@@ -43,6 +43,28 @@
             background-color: #d46211;
         }
     </style>
+<style>
+/* Responsive layout: preserve content and keep controls within the viewport. */
+:where(main, section, article, aside, header, footer, nav, form, fieldset, .flex > *, .grid > *) { min-width: 0; }
+img, video, iframe { max-width: 100%; }
+:where(input, select, textarea) { max-width: 100%; }
+:where(p, h1, h2, h3, a, label) { overflow-wrap: break-word; }
+@media (max-width: 767px) {
+  .px-40, .px-20, .px-16, .px-12, .px-10 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  [class*="min-w-["] { min-width: 0 !important; }
+  table { display: block; max-width: 100%; overflow-x: auto; }
+  .toast-notification { max-width: calc(100vw - 2rem); right: 1rem; }
+}
+
+/* Tablet navigation, footer wrapping, and decorative accents. */
+.material-symbols-outlined { flex-shrink: 0; overflow-wrap: normal; white-space: nowrap; }
+footer li, footer a { overflow-wrap: anywhere; }
+@media (max-width: 1023px) {
+  footer .md\:grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .absolute.-right-6 { right: 0; }
+}
+</style>
+<meta name="currency" content="CLP">
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-background-dark dark:text-background-light">
@@ -119,9 +141,7 @@
                                 </div>
                                 <select
                                     class="w-full bg-transparent border-primary/40 dark:border-primary/50 rounded h-12 px-4 focus:outline-none focus:ring-2 focus:ring-primary/50 dark:focus:ring-primary/60 text-background-dark/60 dark:text-background-light/60">
-                                    <option>México</option>
-                                    <option>España</option>
-                                    <option>Argentina</option>
+                                    <option>Chile</option>
                                 </select>
                             </div>
                         </div>
@@ -170,7 +190,7 @@
                                 <p class="font-semibold">Caja de bombones</p>
                                 <p class="text-sm text-background-dark/60 dark:text-background-light/60">Cantidad: 1</p>
                             </div>
-                            <p class="font-semibold">$150.00</p>
+                            <p class="font-semibold">$150.000</p>
                         </div>
                         <div class="flex items-center gap-4">
                             <div class="w-20 h-20 rounded-lg bg-cover bg-center"
@@ -180,23 +200,23 @@
                                 <p class="font-semibold">Tableta de chocolate</p>
                                 <p class="text-sm text-background-dark/60 dark:text-background-light/60">Cantidad: 2</p>
                             </div>
-                            <p class="font-semibold">$160.00</p>
+                            <p class="font-semibold">$160.000</p>
                         </div>
                     </div>
                     <div class="border-t border-primary/20 dark:border-primary/30 my-8"></div>
                     <div class="space-y-4 text-sm">
                         <div class="flex justify-between">
                             <span>Subtotal</span>
-                            <span class="font-medium">$310.00</span>
+                            <span class="font-medium">$310.000</span>
                         </div>
                         <div class="flex justify-between">
                             <span>Envío</span>
-                            <span class="font-medium">$100.00</span>
+                            <span class="font-medium">$100.000</span>
                         </div>
                         <div class="border-t border-primary/20 dark:border-primary/30 my-4"></div>
                         <div class="flex justify-between font-bold text-lg">
                             <span>Total</span>
-                            <span>$410.00</span>
+                            <span>$410.000</span>
                         </div>
                     </div>
                     <button id="btnConfirm"

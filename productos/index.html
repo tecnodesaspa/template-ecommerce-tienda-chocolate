@@ -45,6 +45,28 @@
             cursor: pointer;
         }
     </style>
+<style>
+/* Responsive layout: preserve content and keep controls within the viewport. */
+:where(main, section, article, aside, header, footer, nav, form, fieldset, .flex > *, .grid > *) { min-width: 0; }
+img, video, iframe { max-width: 100%; }
+:where(input, select, textarea) { max-width: 100%; }
+:where(p, h1, h2, h3, a, label) { overflow-wrap: break-word; }
+@media (max-width: 767px) {
+  .px-40, .px-20, .px-16, .px-12, .px-10 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  [class*="min-w-["] { min-width: 0 !important; }
+  table { display: block; max-width: 100%; overflow-x: auto; }
+  .toast-notification { max-width: calc(100vw - 2rem); right: 1rem; }
+}
+
+/* Tablet navigation, footer wrapping, and decorative accents. */
+.material-symbols-outlined { flex-shrink: 0; overflow-wrap: normal; white-space: nowrap; }
+footer li, footer a { overflow-wrap: anywhere; }
+@media (max-width: 1023px) {
+  footer .md\:grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .absolute.-right-6 { right: 0; }
+}
+</style>
+<meta name="currency" content="CLP">
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-stone-800 dark:text-stone-200">
@@ -118,7 +140,7 @@
                                 max="100" min="0" type="range" value="50" />
                             <div class="flex justify-between text-sm text-stone-600 dark:text-stone-400 mt-2">
                                 <span>$0</span>
-                                <span>$100</span>
+                                <span>$100.000</span>
                             </div>
                         </div>
                         <div>
@@ -169,7 +191,7 @@
                             <h3 class="font-bold text-lg text-stone-800 dark:text-stone-200">Chocolate Negro Intenso
                             </h3>
                             <p class="text-stone-600 dark:text-stone-400 text-sm">Sabor profundo y rico</p>
-                            <p class="font-bold text-primary mt-2">$12.50</p>
+                            <p class="font-bold text-primary mt-2">$12.500</p>
                         </div>
                         <div class="group pointer" name="item">
                             <div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden mb-4"
@@ -178,7 +200,7 @@
                             <h3 class="font-bold text-lg text-stone-800 dark:text-stone-200">Chocolate con Leche Clásico
                             </h3>
                             <p class="text-stone-600 dark:text-stone-400 text-sm">Suave y reconfortante</p>
-                            <p class="font-bold text-primary mt-2">$9.99</p>
+                            <p class="font-bold text-primary mt-2">$9.990</p>
                         </div>
                         <div class="group pointer" name="item">
                             <div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden mb-4"
@@ -187,7 +209,7 @@
                             <h3 class="font-bold text-lg text-stone-800 dark:text-stone-200">Chocolate Blanco Cremoso
                             </h3>
                             <p class="text-stone-600 dark:text-stone-400 text-sm">Delicado y dulce</p>
-                            <p class="font-bold text-primary mt-2">$10.75</p>
+                            <p class="font-bold text-primary mt-2">$10.750</p>
                         </div>
                         <div class="group pointer" name="item">
                             <div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden mb-4"
@@ -196,7 +218,7 @@
                             <h3 class="font-bold text-lg text-stone-800 dark:text-stone-200">Chocolate Negro con
                                 Almendras</h3>
                             <p class="text-stone-600 dark:text-stone-400 text-sm">Crujiente y oscuro</p>
-                            <p class="font-bold text-primary mt-2">$14.00</p>
+                            <p class="font-bold text-primary mt-2">$14.000</p>
                         </div>
                         <div class="group pointer" name="item">
                             <div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden mb-4"
@@ -205,7 +227,7 @@
                             <h3 class="font-bold text-lg text-stone-800 dark:text-stone-200">Chocolate con Leche y
                                 Avellanas</h3>
                             <p class="text-stone-600 dark:text-stone-400 text-sm">Cremoso y con frutos secos</p>
-                            <p class="font-bold text-primary mt-2">$13.25</p>
+                            <p class="font-bold text-primary mt-2">$13.250</p>
                         </div>
                         <div class="group pointer" name="item">
                             <div class="w-full aspect-square bg-cover bg-center rounded-lg overflow-hidden mb-4"
@@ -214,7 +236,7 @@
                             <h3 class="font-bold text-lg text-stone-800 dark:text-stone-200">Chocolate Blanco con Frutas
                             </h3>
                             <p class="text-stone-600 dark:text-stone-400 text-sm">Refrescante y afrutado</p>
-                            <p class="font-bold text-primary mt-2">$11.50</p>
+                            <p class="font-bold text-primary mt-2">$11.500</p>
                         </div>
                     </div>
                     <div class="flex justify-center items-center mt-12 space-x-2">
